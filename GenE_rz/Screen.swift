@@ -6,17 +6,18 @@
 
 import SwiftUI
 
-struct ChrisView: View {
+struct Screen: View {
+    
 
     @ObservedObject public var dataManager = DataManager.shared
     
-    @State public var seqId: String = ""
+    @Binding public var seqId: String
 
     var body: some View {
         
         VStack {
-            
-            TextField("Enter Accession Number", text: $seqId).padding()
+            // this essentially replaces the former "Search" button (also plays sound)
+            Text("Results").onAppear{self.dataManager.downloadSeqData(seqId: self.seqId)}.onAppear(perform: playSound)
             
             Group {
                 Text(dataManager.dataSet?.INSDSeq.locus ?? "")
@@ -36,19 +37,15 @@ struct ChrisView: View {
             }
             
             Group {
-            Text(dataManager.dataSet?.INSDSeq.sequence ?? "")
+                Text(dataManager.dataSet?.INSDSeq.sequence ?? "")
             }
-
-            Button("Search") {
-                self.dataManager.downloadSeqData(seqId: self.seqId)
-            }
- 
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct Screen_Previews: PreviewProvider {
     static var previews: some View {
-        ChrisView()
+        // still not sure what the parameters in Screen() are for, but it allowed me to run my code without crashing... https://stackoverflow.com/questions/58701826/swiftui-how-to-instantiate-previewprovider-when-view-requires-binding-in-initia
+        Screen(seqId: .constant("text"))
     }
 }

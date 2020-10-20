@@ -3,7 +3,6 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @ObservedObject public var dataManager = DataManager.shared
     @State public var seqId: String = ""
     
   
@@ -24,28 +23,6 @@ struct ContentView: View {
                 
                 VStack {
                     
-                    Group {
-                        Text(dataManager.dataSet?.INSDSeq.locus ?? "")
-                        Text(dataManager.dataSet?.INSDSeq.organism ?? "")
-                        Text(dataManager.dataSet?.INSDSeq.source ?? "")
-                        Text(dataManager.dataSet?.INSDSeq.taxonomy ?? "")
-                        Text("\(dataManager.dataSet?.INSDSeq.length ?? 0) ")
-                        Text(dataManager.dataSet?.INSDSeq.moltype ?? "")
-                    }
-                    
-                    Group {
-                        Text(dataManager.dataSet?.INSDSeq.topology ?? "")
-                        Text(dataManager.dataSet?.INSDSeq.strandedness ?? "")
-                        Text(dataManager.dataSet?.INSDSeq.definition ?? "")
-                        Text(dataManager.dataSet?.INSDSeq.featureTable.INSDFeature.map{ $0.INSDFeature_key}.joined(separator: ", \n") ?? "")
-                        Text(dataManager.dataSet?.INSDSeq.featureTable.INSDFeature.map{$0.INSDFeature_location}.joined(separator: ", \n") ?? "")
-                    }
-                    
-                    Group {
-                    Text(dataManager.dataSet?.INSDSeq.sequence ?? "")
-                    }
-
-                    
                     // Image of Logo
                     Logo()
                         .offset(x: 0, y: -90)
@@ -64,12 +41,8 @@ struct ContentView: View {
                         .offset(x: 0, y: -8)
                         .font(.system(size: 40))
                     
-                    // Button
-                    Button(action: {
-                        
-                        playSound()
-                        self.dataManager.downloadSeqData(seqId: self.seqId)
-                    }) {
+                    // Button (Navigationlink) to go to Chris results view
+                    NavigationLink(destination: Screen(seqId: self.$seqId)){
                         Text("Find my sequence! 🧬")
                             .font(.system(size: 40))
                             .foregroundColor(Color.white)
@@ -78,16 +51,12 @@ struct ContentView: View {
                             .background(Color(red: 86/255, green: 118/255, blue: 255/255))
                             .cornerRadius(20)
                             .offset(x: 0, y: 50)
-                        
-                           
-                    
                     }.padding()
                 }.padding()
                 
                 .navigationBarItems(
                      leading:
-                         NavigationLink(destination: Text("About View")
-                                            ) {
+                         NavigationLink(destination: About()) {
                                 Text("About")
                                     .font(.title)
                                     .foregroundColor(Color.white)
@@ -95,7 +64,7 @@ struct ContentView: View {
                             
                         
                      trailing:
-                         NavigationLink(destination: Text("Help View")) {
+                         NavigationLink(destination: Help()) {
                             Text("Help")
                                 .font(.title)
                                 .foregroundColor(Color.white)

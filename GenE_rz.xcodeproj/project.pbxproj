@@ -19,6 +19,8 @@
 		D166D14B253BE04800973E39 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D166D14A253BE04800973E39 /* DataManager.swift */; };
 		D166D14E253BE0BB00973E39 /* XMLCoder in Frameworks */ = {isa = PBXBuildFile; productRef = D166D14D253BE0BB00973E39 /* XMLCoder */; };
 		D166D150253BE1A100973E39 /* SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D166D14F253BE1A100973E39 /* SwiftUIApp.swift */; };
+		D1B7ED7F253E7026004EA8E1 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B7ED7E253E7026004EA8E1 /* About.swift */; };
+		D1B7ED81253E7064004EA8E1 /* Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B7ED80253E7064004EA8E1 /* Help.swift */; };
 		D1E6768A253BCF8C00820E83 /* level-completed.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D1E67689253BCF8C00820E83 /* level-completed.mp3 */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +38,8 @@
 		D166D146253BE00800973E39 /* Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		D166D14A253BE04800973E39 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		D166D14F253BE1A100973E39 /* SwiftUIApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIApp.swift; sourceTree = "<group>"; };
+		D1B7ED7E253E7026004EA8E1 /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
+		D1B7ED80253E7064004EA8E1 /* Help.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Help.swift; sourceTree = "<group>"; };
 		D1E67689253BCF8C00820E83 /* level-completed.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "level-completed.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,6 +80,8 @@
 				D13CCAB7253A775E001C8223 /* ContentView.swift */,
 				D13B9A9B253BC90500577263 /* Logo.swift */,
 				D13B9A9D253BC9F600577263 /* playSound.swift */,
+				D1B7ED7E253E7026004EA8E1 /* About.swift */,
+				D1B7ED80253E7064004EA8E1 /* Help.swift */,
 				D13CCAB9253A7763001C8223 /* Assets.xcassets */,
 				D13CCABE253A7763001C8223 /* LaunchScreen.storyboard */,
 				D13CCAC1253A7763001C8223 /* Info.plist */,
@@ -173,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1B7ED81253E7064004EA8E1 /* Help.swift in Sources */,
 				D13CCAB4253A775E001C8223 /* AppDelegate.swift in Sources */,
 				D13CCAB6253A775E001C8223 /* SceneDelegate.swift in Sources */,
 				D13B9A9C253BC90600577263 /* Logo.swift in Sources */,
@@ -180,6 +187,7 @@
 				D13CCAB8253A775E001C8223 /* ContentView.swift in Sources */,
 				D166D150253BE1A100973E39 /* SwiftUIApp.swift in Sources */,
 				D166D14B253BE04800973E39 /* DataManager.swift in Sources */,
+				D1B7ED7F253E7026004EA8E1 /* About.swift in Sources */,
 				D166D147253BE00900973E39 /* Screen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

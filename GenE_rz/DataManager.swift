@@ -25,14 +25,6 @@ struct INSDSeq: Decodable {
     let taxonomy: String
     let source: String
 
-
-
-
-
-
-
-
-
     private enum CodingKeys: String, CodingKey {
         case
             locus = "INSDSeq_locus",
