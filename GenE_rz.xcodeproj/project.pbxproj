@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D13961FD253E8B8C005CE54D /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13961FC253E8B8C005CE54D /* Data.swift */; };
 		D13B9A9C253BC90600577263 /* Logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13B9A9B253BC90500577263 /* Logo.swift */; };
 		D13B9A9E253BC9F600577263 /* playSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13B9A9D253BC9F600577263 /* playSound.swift */; };
 		D13CCAB4253A775E001C8223 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13CCAB3253A775E001C8223 /* AppDelegate.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D13961FC253E8B8C005CE54D /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		D13B9A9B253BC90500577263 /* Logo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logo.swift; sourceTree = "<group>"; };
 		D13B9A9D253BC9F600577263 /* playSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playSound.swift; sourceTree = "<group>"; };
 		D13CCAB0253A775E001C8223 /* GenE_rz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GenE_rz.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +83,7 @@
 				D13B9A9B253BC90500577263 /* Logo.swift */,
 				D13B9A9D253BC9F600577263 /* playSound.swift */,
 				D1B7ED7E253E7026004EA8E1 /* About.swift */,
+				D13961FC253E8B8C005CE54D /* Data.swift */,
 				D1B7ED80253E7064004EA8E1 /* Help.swift */,
 				D13CCAB9253A7763001C8223 /* Assets.xcassets */,
 				D13CCABE253A7763001C8223 /* LaunchScreen.storyboard */,
@@ -183,6 +186,7 @@
 				D13CCAB4253A775E001C8223 /* AppDelegate.swift in Sources */,
 				D13CCAB6253A775E001C8223 /* SceneDelegate.swift in Sources */,
 				D13B9A9C253BC90600577263 /* Logo.swift in Sources */,
+				D13961FD253E8B8C005CE54D /* Data.swift in Sources */,
 				D13B9A9E253BC9F600577263 /* playSound.swift in Sources */,
 				D13CCAB8253A775E001C8223 /* ContentView.swift in Sources */,
 				D166D150253BE1A100973E39 /* SwiftUIApp.swift in Sources */,
