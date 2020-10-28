@@ -22,6 +22,7 @@
 		D166D147253BE00900973E39 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D166D146253BE00800973E39 /* Screen.swift */; };
 		D166D14B253BE04800973E39 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D166D14A253BE04800973E39 /* DataManager.swift */; };
 		D166D14E253BE0BB00973E39 /* XMLCoder in Frameworks */ = {isa = PBXBuildFile; productRef = D166D14D253BE0BB00973E39 /* XMLCoder */; };
+		D199CDDB254911E900649F3D /* ChrisUpdateScreen_gitPull.swift in Sources */ = {isa = PBXBuildFile; fileRef = D199CDDA254911E900649F3D /* ChrisUpdateScreen_gitPull.swift */; };
 		D1B7ED7F253E7026004EA8E1 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B7ED7E253E7026004EA8E1 /* About.swift */; };
 		D1E6768A253BCF8C00820E83 /* level-completed.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D1E67689253BCF8C00820E83 /* level-completed.mp3 */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,7 @@
 		D13CCAC1253A7763001C8223 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D166D146253BE00800973E39 /* Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		D166D14A253BE04800973E39 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		D199CDDA254911E900649F3D /* ChrisUpdateScreen_gitPull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChrisUpdateScreen_gitPull.swift; sourceTree = "<group>"; };
 		D1B7ED7E253E7026004EA8E1 /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
 		D1E67689253BCF8C00820E83 /* level-completed.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "level-completed.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +98,7 @@
 				D13CCAB7253A775E001C8223 /* ContentView.swift */,
 				D1E67689253BCF8C00820E83 /* level-completed.mp3 */,
 				D13B9A9B253BC90500577263 /* Logo.swift */,
+				D199CDDA254911E900649F3D /* ChrisUpdateScreen_gitPull.swift */,
 				D13B9A9D253BC9F600577263 /* playSound.swift */,
 				D1189E6E2548E0F0004C1BFA /* Map.swift */,
 				D1B7ED7E253E7026004EA8E1 /* About.swift */,
@@ -208,6 +211,7 @@
 				D13CCAB8253A775E001C8223 /* ContentView.swift in Sources */,
 				D166D14B253BE04800973E39 /* DataManager.swift in Sources */,
 				D1189E662548BA60004C1BFA /* ScienceImage2.swift in Sources */,
+				D199CDDB254911E900649F3D /* ChrisUpdateScreen_gitPull.swift in Sources */,
 				D1B7ED7F253E7026004EA8E1 /* About.swift in Sources */,
 				D1189E6F2548E0F0004C1BFA /* Map.swift in Sources */,
 				D166D147253BE00900973E39 /* Screen.swift in Sources */,
