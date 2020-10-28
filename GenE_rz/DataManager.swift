@@ -4,6 +4,13 @@
 //  Created by Chris Richardson on 10/6/20.
 //
 
+//
+//  datamanager.swift
+//  xml_parser
+//
+//  Created by chris richardson on 10/21/20.
+//
+
 import Foundation
 import XMLCoder
 
@@ -25,22 +32,9 @@ struct INSDSeq: Decodable {
     let taxonomy: String
     let source: String
 
+
     private enum CodingKeys: String, CodingKey {
-        case
-            locus = "INSDSeq_locus",
-            length = "INSDSeq_length",
-            strandedness = "INSDSeq_strandedness",
-            moltype = "INSDSeq_moltype",
-            sequence = "INSDSeq_sequence",
-            keywords = "INSDSeq_keywords",
-            featureTable = "INSDSeq_feature-table",
-            definition = "INSDSeq_definition",
-            topology = "INSDSeq_topology",
-            organism = "INSDSeq_organism",
-            taxonomy = "INSDSeq_taxonomy",
-            source = "INSDSeq_source"
-
-
+        case locus = "INSDSeq_locus", length = "INSDSeq_length", strandedness = "INSDSeq_strandedness", moltype = "INSDSeq_moltype", sequence = "INSDSeq_sequence", keywords = "INSDSeq_keywords", featureTable = "INSDSeq_feature-table", definition = "INSDSeq_definition", topology = "INSDSeq_topology", organism = "INSDSeq_organism", taxonomy = "INSDSeq_taxonomy", source = "INSDSeq_source"
     }
 
     init(from decoder: Decoder) throws {
@@ -63,26 +57,40 @@ struct INSDSeq: Decodable {
 
 struct INSDSeq_Keywords: Decodable {
     let INSDKeyword: [String]
-
 }
 
 struct INSDSeq_FeatureTable: Decodable {
     let INSDFeature: [INSDFeature]
-
 }
 
-struct INSDFeature: Decodable {
+struct INSDFeature: Decodable, Hashable {
     let INSDFeature_key: String
     let INSDFeature_location: String
-    let INSDfeature_intervals: [INSDfeature_Intervals]
-    let INSDfeatuere_quals: [INSDFeature_quals]
-}
-struct INSDfeature_Intervals: Decodable {
-    let INSDInterval_from: String
-    let INSDInterval_to: String
+    let INSDFeature_intervals: [INSDFeature_intervals]
+    let INSDFeature_quals: [INSDFeature_quals]
 
+    static func == (lhs: INSDFeature, rhs: INSDFeature) -> Bool {
+        lhs.INSDFeature_key == rhs.INSDFeature_key
+    }
+
+    func hash(into hasher: inout Hasher) {}
 }
-struct INSDFeature_quals: Decodable{
+
+struct INSDFeature_intervals: Decodable {
+    let INSDInterval: [INSDInterval]
+}
+
+struct INSDInterval: Decodable {
+    let INSDInterval_from: Int?
+    let INSDInterval_to: Int?
+    let INSDInterval_point: Int?
+    let INSDInterval_accession: String?
+}
+
+struct INSDFeature_quals: Decodable {
+    let INSDQualifier: [INSDQualifier]
+}
+struct INSDQualifier: Decodable {
     let INSDQualifier_name: String
     let INSDQualifier_value: String
 }
@@ -92,6 +100,9 @@ class DataManager: ObservableObject {
     static let shared = DataManager()
 
     @Published var dataSet: INSDSet?
+
+    @Published var featureList: [INSDFeature] = []
+
 
     func downloadSeqData(seqId: String) {
         let urlString = "https://www.ncbi.nlm.nih.gov/sviewer/viewer.cgi?tool=portal&save=file&log$=seqview&db=nuccore&report=gbc_xml&id=\(seqId)&conwithfeat=on&withparts=on&hide-cdd=on"
@@ -112,6 +123,7 @@ class DataManager: ObservableObject {
                 let decodedDataSet = try XMLDecoder().decode(INSDSet.self, from: data)
                 DispatchQueue.main.async {
                     self.dataSet = decodedDataSet
+                    self.featureList = self.dataSet?.INSDSeq.featureTable.INSDFeature ?? []
                 }
             } catch let error {
                 print(error.localizedDescription)

@@ -1,10 +1,10 @@
 import SwiftUI
 
 
+
 struct ContentView: View {
     
     @State public var seqId: String = ""
-    
   
     var body: some View {
         
@@ -42,7 +42,7 @@ struct ContentView: View {
                         .font(.system(size: 40))
                     
                     // Button (Navigationlink) to go to Chris results view
-                    NavigationLink(destination: Screen(seqId: self.$seqId)){
+                    NavigationLink(destination: Map(seqId: self.$seqId)){
                         Text("Find my sequence! 🧬")
                             .font(.system(size: 40))
                             .foregroundColor(Color.white)
@@ -64,26 +64,16 @@ struct ContentView: View {
                             
                         
                      trailing:
-                         NavigationLink(destination: Help()) {
-                            Text("Help")
+                    // rz - help button opens safari link to Gen-E project github
+                        Button("Help") {UIApplication.shared.open(URL(string: "https://github.com/xrdmzx/GenE_rz")!)}
                                 .font(.title)
-                                .foregroundColor(Color.white)
-                         }
+                                .foregroundColor(.white)
                  )
-                
-                
-                
             }
-           
-          
         }
-        
-        
         .navigationViewStyle(StackNavigationViewStyle())
-        
     }
     
-
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {
             ContentView()

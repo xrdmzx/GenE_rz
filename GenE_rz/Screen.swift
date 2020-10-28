@@ -16,12 +16,14 @@ struct Screen: View {
     var body: some View {
         ScrollView {
             ZStack {
+/* // rz- commented out because i think background is laeving a gap at the top of the top of page
                 // Background navy blue
                 Rectangle()
                     .foregroundColor(Color(red: 10/255, green: 77/255, blue: 174/255)).edgesIgnoringSafeArea(.all)
-                VStack {
+ */
+                VStack(alignment:.leading) {
                     //rz- this essentially replaces the former "Search" button (also plays sound) https://stackoverflow.com/questions/58883501/swiftui-calling-functions-from-other-class
-                    Text("Results").foregroundColor(Color.white).onAppear{self.dataManager.downloadSeqData(seqId: self.seqId)}.onAppear(perform: playSound).edgesIgnoringSafeArea(.all)
+                    Text("Results").foregroundColor(Color.white).onAppear{self.dataManager.downloadSeqData(seqId: self.seqId)}.edgesIgnoringSafeArea(.all)
                     
                     Group {
                         Text(dataManager.dataSet?.INSDSeq.locus ?? "")
@@ -30,7 +32,7 @@ struct Screen: View {
                         Text(dataManager.dataSet?.INSDSeq.taxonomy ?? "")
                         Text("\(dataManager.dataSet?.INSDSeq.length ?? 0) ")
                         Text(dataManager.dataSet?.INSDSeq.moltype ?? "")
-                    }.foregroundColor(Color.white)
+                    }.foregroundColor(Color.black)
                     
                     Group {
                         Text(dataManager.dataSet?.INSDSeq.topology ?? "")
@@ -38,11 +40,11 @@ struct Screen: View {
                         Text(dataManager.dataSet?.INSDSeq.definition ?? "")
                         Text(dataManager.dataSet?.INSDSeq.featureTable.INSDFeature.map{ $0.INSDFeature_key}.joined(separator: ", \n") ?? "")
                         Text(dataManager.dataSet?.INSDSeq.featureTable.INSDFeature.map{$0.INSDFeature_location}.joined(separator: ", \n") ?? "")
-                    }.foregroundColor(Color.white)
+                    }.foregroundColor(Color.black)
                     
                     Group {
                         Text(dataManager.dataSet?.INSDSeq.sequence ?? "")
-                    }.foregroundColor(Color.white)
+                    }.foregroundColor(Color.black)
                 }
             }
         }.frame(maxWidth: .infinity) //rz - allow for scrolling data by tapping anywhere on screen
