@@ -16,6 +16,11 @@ struct About: View {
                     AboutImage()
                         .offset(x: 0, y: -10)
                         .edgesIgnoringSafeArea(.all)
+                    Spacer()
+                    
+                    Text("About")
+                    
+                    Spacer()
                     
                     Text("We are a group of 5 biotechnology students. GenE started as a capstrone project and evolved to much more. Our company found that with our app development skills and programming skills, we could change the face of genetic retrieval and editing capacity.")
                         .foregroundColor(Color.white)

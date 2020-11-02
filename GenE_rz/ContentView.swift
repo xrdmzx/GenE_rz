@@ -5,6 +5,10 @@ import SwiftUI
 struct ContentView: View {
     
     @State public var seqId: String = ""
+    
+    // rz- fabiola code for map
+    @State public var showMap = false
+
   
     var body: some View {
         
@@ -51,9 +55,9 @@ struct ContentView: View {
                             .background(Color(red: 86/255, green: 118/255, blue: 255/255))
                             .cornerRadius(20)
                             .offset(x: 0, y: 50)
+                            
                     }.padding()
                 }.padding()
-                
                 .navigationBarItems(
                      leading:
                          NavigationLink(destination: About()) {
@@ -65,7 +69,7 @@ struct ContentView: View {
                         
                      trailing:
                     // rz - help button opens safari link to Gen-E project github
-                        Button("Help") {UIApplication.shared.open(URL(string: "https://github.com/xrdmzx/GenE_rz")!)}
+                        Button("Help") {UIApplication.shared.open(URL(string: "https://github.com/cr73279/GenE")!)}
                                 .font(.title)
                                 .foregroundColor(.white)
                  )

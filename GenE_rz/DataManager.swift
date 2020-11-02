@@ -1,9 +1,3 @@
-//  DataManager.swift
-//  XML_Parser_SwiftUI
-//
-//  Created by Chris Richardson on 10/6/20.
-//
-
 //
 //  datamanager.swift
 //  xml_parser

@@ -24,6 +24,11 @@
 		D166D14E253BE0BB00973E39 /* XMLCoder in Frameworks */ = {isa = PBXBuildFile; productRef = D166D14D253BE0BB00973E39 /* XMLCoder */; };
 		D199CDDB254911E900649F3D /* ChrisUpdateScreen_gitPull.swift in Sources */ = {isa = PBXBuildFile; fileRef = D199CDDA254911E900649F3D /* ChrisUpdateScreen_gitPull.swift */; };
 		D1B7ED7F253E7026004EA8E1 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B7ED7E253E7026004EA8E1 /* About.swift */; };
+		D1DFCDCD254F3F2B003E7B54 /* ProcessFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DFCDCC254F3F2B003E7B54 /* ProcessFeatures.swift */; };
+		D1DFCDCF254F3F41003E7B54 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DFCDCE254F3F41003E7B54 /* MapView.swift */; };
+		D1DFCDD1254F3F50003E7B54 /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DFCDD0254F3F50003E7B54 /* Feature.swift */; };
+		D1DFCDD3254F3F60003E7B54 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DFCDD2254F3F60003E7B54 /* Mapper.swift */; };
+		D1DFCDD5254F440B003E7B54 /* genbankAppendixII_featureKeys.txt in Resources */ = {isa = PBXBuildFile; fileRef = D1DFCDD4254F440B003E7B54 /* genbankAppendixII_featureKeys.txt */; };
 		D1E6768A253BCF8C00820E83 /* level-completed.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D1E67689253BCF8C00820E83 /* level-completed.mp3 */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +64,11 @@
 		D166D14A253BE04800973E39 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		D199CDDA254911E900649F3D /* ChrisUpdateScreen_gitPull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChrisUpdateScreen_gitPull.swift; sourceTree = "<group>"; };
 		D1B7ED7E253E7026004EA8E1 /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
+		D1DFCDCC254F3F2B003E7B54 /* ProcessFeatures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessFeatures.swift; sourceTree = "<group>"; };
+		D1DFCDCE254F3F41003E7B54 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		D1DFCDD0254F3F50003E7B54 /* Feature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
+		D1DFCDD2254F3F60003E7B54 /* Mapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
+		D1DFCDD4254F440B003E7B54 /* genbankAppendixII_featureKeys.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = genbankAppendixII_featureKeys.txt; sourceTree = "<group>"; };
 		D1E67689253BCF8C00820E83 /* level-completed.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "level-completed.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				D13CCAB3253A775E001C8223 /* AppDelegate.swift */,
+				D1DFCDD4254F440B003E7B54 /* genbankAppendixII_featureKeys.txt */,
 				D13CCAB5253A775E001C8223 /* SceneDelegate.swift */,
 				D13CCAB7253A775E001C8223 /* ContentView.swift */,
 				D1E67689253BCF8C00820E83 /* level-completed.mp3 */,
@@ -110,6 +121,10 @@
 				D13CCAC1253A7763001C8223 /* Info.plist */,
 				D166D146253BE00800973E39 /* Screen.swift */,
 				D166D14A253BE04800973E39 /* DataManager.swift */,
+				D1DFCDCE254F3F41003E7B54 /* MapView.swift */,
+				D1DFCDCC254F3F2B003E7B54 /* ProcessFeatures.swift */,
+				D1DFCDD0254F3F50003E7B54 /* Feature.swift */,
+				D1DFCDD2254F3F60003E7B54 /* Mapper.swift */,
 				D13CCABB253A7763001C8223 /* Preview Content */,
 			);
 			path = GenE_rz;
@@ -188,6 +203,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1DFCDD5254F440B003E7B54 /* genbankAppendixII_featureKeys.txt in Resources */,
 				D13CCAC0253A7763001C8223 /* LaunchScreen.storyboard in Resources */,
 				D13CCABD253A7763001C8223 /* Preview Assets.xcassets in Resources */,
 				D13CCABA253A7763001C8223 /* Assets.xcassets in Resources */,
@@ -202,13 +218,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1DFCDCD254F3F2B003E7B54 /* ProcessFeatures.swift in Sources */,
 				D13CCAB4253A775E001C8223 /* AppDelegate.swift in Sources */,
 				D13CCAB6253A775E001C8223 /* SceneDelegate.swift in Sources */,
 				D13B9A9C253BC90600577263 /* Logo.swift in Sources */,
+				D1DFCDD1254F3F50003E7B54 /* Feature.swift in Sources */,
 				D1189E622548B9D1004C1BFA /* AboutImage.swift in Sources */,
 				D1189E642548BA2D004C1BFA /* ScienceImage1.swift in Sources */,
 				D13B9A9E253BC9F600577263 /* playSound.swift in Sources */,
+				D1DFCDCF254F3F41003E7B54 /* MapView.swift in Sources */,
 				D13CCAB8253A775E001C8223 /* ContentView.swift in Sources */,
+				D1DFCDD3254F3F60003E7B54 /* Mapper.swift in Sources */,
 				D166D14B253BE04800973E39 /* DataManager.swift in Sources */,
 				D1189E662548BA60004C1BFA /* ScienceImage2.swift in Sources */,
 				D199CDDB254911E900649F3D /* ChrisUpdateScreen_gitPull.swift in Sources */,
